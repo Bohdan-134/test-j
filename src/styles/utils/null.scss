@@ -1,0 +1,174 @@
+@import "./mixin.scss";
+@import "./vars.scss";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+::-moz-selection {
+  background-color: rgba(223, 105, 81, 0.4784313725);
+}
+
+::selection {
+  background-color: rgba(223, 105, 81, 0.4784313725);
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+:active,
+:focus,
+a:active,
+a:focus {
+  outline: 0;
+}
+
+aside,
+footer,
+header,
+nav {
+  display: block;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper,
+#wrapper__oops {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.4rem;
+    right: -5.4rem;
+    z-index: -1;
+    width: 76.6rem;
+    height: 87.2rem;
+    background: url("../../img/welcome/decore.svg") no-repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6.5rem;
+    left: -42.5rem;
+    z-index: -1;
+    width: 47.9rem;
+    height: 49.7rem;
+    opacity: 0.3;
+    background: var(--shadow-1, #d5aee4);
+    filter: blur(75px);
+    border-radius: 50%;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 0 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  body,
+  html {
+    font-size: 9px;
+  }
+  .container {
+    max-width: 800px;
+  }
+  .section {
+    padding: 0 10rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  body,
+  html {
+    font-size: 7px;
+  }
+  .wrapper {
+    &::before {
+      right: -30rem;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  .container {
+    max-width: 100%;
+  }
+  .section {
+    padding: 0 5rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body,
+  html {
+    font-size: 6px;
+  }
+}

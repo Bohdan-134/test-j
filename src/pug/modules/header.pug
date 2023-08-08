@@ -1,0 +1,30 @@
+.container
+    a(href="#").logo_wrapper
+        include ../../img/header/logo.svg
+    nav.navigation
+        ul.navigation_list
+            li.navigation_item
+                a(href="../../page404.html") Destinations
+            li.navigation_item
+                a(href="../../page404.html") Hotels
+            li.navigation_item
+                a(href="../../page404.html") Flights
+            li.navigation_item
+                a(href="../../page404.html") Bookings
+        .auth-buttons
+            button.login_btn Login
+            button.sign_up_btn Sign up
+        .language 
+            span.language_text EN
+            include ../../img/header/arrow.svg
+            ul.language_list
+                li.language_item
+                    button.language_btn(data-lan="EN") EN
+                li.language_item
+                    button.language_btn(data-lan="UA") UA
+    button#mobile_menu
+        svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewbox='0 0 24 24' fill='none')
+            path(d='M5 7H19' stroke='#33363F' stroke-width='1' stroke-linecap='round')
+            path(d='M5 12H19' stroke='#33363F' stroke-width='1' stroke-linecap='round')
+            path(d='M5 17H19' stroke='#33363F' stroke-width='1' stroke-linecap='round')
+            

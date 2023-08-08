@@ -1,0 +1,40 @@
+@import '../utils/main.utils.scss';
+body.popup-active {
+    overflow: hidden;
+}
+
+.popup-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.182);
+    backdrop-filter: blur(5px);
+    @include flex(row, center, center);
+    .popup-content {
+        padding: 2rem;
+        background-color: $white;
+        border-radius: 1rem;
+        h2 {
+            @include font(3rem, 400, 3rem, $orange);
+        }
+    }
+}
+
+.popup-wrapper.visible {
+    animation: opacity .5s .3s both;
+}
+
+.popup-wrapper.close {
+    animation: reverseOpacity .5s .3s both;
+}
+
+.popup-wrapper.visible .popup-content {
+    animation: to-top .3s .3s both;
+}
+
+.popup-wrapper.close .popup-content {
+    animation: to-bottom .3s both;
+}

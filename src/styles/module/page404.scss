@@ -1,0 +1,23 @@
+@import '../utils/main.utils.scss';
+
+#wrapper__oops {
+    @include flex(row, center, center);
+  }
+  
+  .oops_title {
+    position: relative;
+    z-index: 1;
+    @include font(8rem, 400, 8rem, $orange);
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 38.5rem;
+      height: 1.2rem;
+      background: url("../../img/welcome/text-decore.svg") no-repeat;
+      background-position: center;
+    }
+  }

@@ -1,0 +1,43 @@
+@import '../utils/main.utils.scss';
+.navigation_list__mobile {
+    padding: 5rem;
+    @include flex(column, null, center);
+}
+
+.navigation_item__mobile {
+    a {
+        @include font(2.5rem, 400, 2.5rem, $dark_blue);
+    }
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
+.auth-buttons__mobile {
+    margin-bottom: 4rem;
+    @include flex(row, center, center);
+}
+
+.login_btn__mobile {
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    background-color: transparent;
+    @include font(2rem, 400, 2rem, $orange);
+}
+
+.sign_up_btn__mobile {
+    padding: 1rem 2rem;
+    background-color: $orange;
+    border-radius: 1rem;
+    @include font(2rem, 400, 2rem, $white);
+}
+
+.language__mobile {
+    margin-bottom: 5rem;
+    @include flex(row, center, center);
+}
+
+.language_text__mobile {
+    margin-right: 1rem;
+    @include font(1.5rem, 400, 1.5rem, $dark_blue);
+}

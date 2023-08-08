@@ -1,0 +1,64 @@
+@keyframes opacity {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(5px);
+        
+    }
+}
+
+@keyframes reverseOpacity {
+    from {
+        opacity: 1;
+        backdrop-filter: blur(5px);
+    }
+    to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@keyframes to-top {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes to-bottom {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes text-decore {
+    from {
+        transform: scale(0, 1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes plane {
+    from {
+        opacity: 0;
+        transform: translate(-8rem, 8rem);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-0rem, -0rem);
+    }
+}
