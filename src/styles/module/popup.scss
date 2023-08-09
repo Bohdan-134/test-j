@@ -1,6 +1,7 @@
 @import '../utils/main.utils.scss';
 body.popup-active {
     overflow: hidden;
+    overflow-y: hidden;
 }
 
 .popup-wrapper {
